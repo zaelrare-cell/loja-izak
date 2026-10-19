@@ -3,6 +3,14 @@ const senha = document.getElementById("senha");
 const botaoEntrar = document.getElementById("botaoEntrar");
 
 botaoEntrar.addEventListener("click", function () {
-    alert("Botão clicado!");
+    const nomeUsuario = usuario.value;
+    const senhaDigitada = senha.value;
+
+    if (nomeUsuario === "" || senhaDigitada === "") {
+        alert("Preencha todos os campos!");
+    } else if (nomeUsuario === "zael" && senhaDigitada === "Minions2021") {
+        alert("login realizado com sucesso!");
+    } else {
+        alert("Usuário ou senha incorretos!");
+    }
 });
-   
