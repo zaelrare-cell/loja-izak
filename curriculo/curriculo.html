@@ -1,70 +1,53 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Currículo</title>
-    <link rel="stylesheet" href="css/curriculo.css">
+    <title>Meu Currículo</title><link rel="stylesheet" href="css/curriculo.css">
+    <script src="java/script.js" defer></script>
+
 </head>
-<body>
+<body><header>
+    <h2>Meu Currículo</h2>
 
-    <header>
-        <h2>Meu Currículo</h2>
-        <button onclick="editar()">Editar</button>
-        <button onclick="sair()">Sair</button>
-    </header>
+    <button id="editar" onclick="editar()">Editar</button>
+    <button id="sair" onclick="sair()">Sair</button>
+</header>
 
-    <div class="curriculo">
+<div class="curriculo">
 
-        <img src="cruz.jpg" alt="Minha foto" class="foto">
+ 
 
-        <h1 contenteditable="false">Izak Leite Reis Guimarães</h1>
-        <p>Estudante do Ensino Médio</p>
+    <img src="cruz.jpg" alt="Minha foto" class="foto">
 
-        <hr>
+    <h1 id="nome" contenteditable="false">
+        Izak Leite Reis Guimarães
+    </h1>
 
-        <h3>𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐜̧𝐨̃𝐞𝐬 𝐩𝐞𝐬𝐬𝐨𝐚𝐢𝐬</h3>
-        <a href="mailto:izak04806@gmail.com">Email: izak04806@gmail.com</a>
-        <p contenteditable="false">Telefone: (62) 9441-4108</p>
-        <p contenteditable="false">Cidade: Anápolis - GO</p>
+    <p>Estudante do Ensino Médio</p>
 
-        <h3>𝐎𝐛𝐣𝐞𝐭𝐢𝐯𝐨</h3>
-        <p contenteditable="false">
-            Busco minha primeira oportunidade de trabalho
-            para adquirir experiência e aprender novas habilidades.
-        </p>
+    <hr>
 
-        <h3>𝐄𝐬𝐜𝐨𝐥𝐚𝐫𝐢𝐝𝐚𝐝𝐞</h3>
-        <p contenteditable="false">Ensino Médio em andamento</p>
+    <h3 id="informacoes">Informações pessoais</h3>
+    <a href="mailto:izak04806@gmail.com">Email: izak04806@gmail.com</a>
+    <p contenteditable="false">Telefone: (62) 9441-4108</p>
+    <p id="Cidade" contenteditable="false">Cidade: Anápolis - GO</p>
 
-        <h3>𝐇𝐚𝐛𝐢𝐥𝐢𝐝𝐚𝐝𝐞𝐬</h3>
-        <p contenteditable="false">
-            Organização, trabalho em equipe e informática básica.
-        </p>
+    <h3 id="objetivo">Objetivo</h3>
+    <p contenteditable="false">
+        Busco minha primeira oportunidade de trabalho
+        para adquirir experiência e aprender novas habilidades.
+    </p>
 
-    </div>
+    <h3 id="escolaridade">Escolaridade</h3>
+    <p contenteditable="false">Ensino Médio em andamento</p>
 
-    <script>
-        function editar() {
-            let campos = document.querySelectorAll(
-                '.curriculo [contenteditable]'
-            );
+    <h3 id="habilidades">Habilidades</h3>
+    <p contenteditable="false">
+        Organização, trabalho em equipe e informática básica.
+    </p>
 
-            campos.forEach(campo => {
-                campo.contentEditable =
-                    campo.contentEditable === "true" ? "false" : "true";
-            });
-        }
-
-        function sair() {
-            window.location.href = "about:blank";
-        }
-    </script>
+</div>
 
 </body>
 </html>
-
-
-
-
 
